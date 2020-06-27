@@ -43,7 +43,7 @@
 #define STM32_PVD_ENABLE                    FALSE
 #define STM32_PLS                           STM32_PLS_LEV0
 #define STM32_HSI16_ENABLED                 FALSE
-#define STM32_HSI48_ENABLED                 FALSE
+#define STM32_HSI48_ENABLED                 TRUE
 #define STM32_LSI_ENABLED                   TRUE
 #define STM32_HSE_ENABLED                   FALSE
 #define STM32_LSE_ENABLED                   FALSE
@@ -53,11 +53,11 @@
 #define STM32_SW                            STM32_SW_PLL
 #define STM32_PLLSRC                        STM32_PLLSRC_MSI
 #define STM32_PLLM_VALUE                    1
-#define STM32_PLLN_VALUE                    40
-#define STM32_PLLPDIV_VALUE                 7
+#define STM32_PLLN_VALUE                    80
+#define STM32_PLLPDIV_VALUE                 0
 #define STM32_PLLP_VALUE                    7
-#define STM32_PLLQ_VALUE                    2
-#define STM32_PLLR_VALUE                    2
+#define STM32_PLLQ_VALUE                    6
+#define STM32_PLLR_VALUE                    4
 #define STM32_HPRE                          STM32_HPRE_DIV1
 #define STM32_PPRE1                         STM32_PPRE1_DIV1
 #define STM32_PPRE2                         STM32_PPRE2_DIV1
@@ -65,11 +65,13 @@
 #define STM32_MCOSEL                        STM32_MCOSEL_NOCLOCK
 #define STM32_MCOPRE                        STM32_MCOPRE_DIV1
 #define STM32_LSCOSEL                       STM32_LSCOSEL_NOCLOCK
-#define STM32_PLLSAI1N_VALUE                24
-#define STM32_PLLSAI1PDIV_VALUE             7
+#define STM32_PLLSAI1N_VALUE                72
+#define STM32_PLLSAI1PDIV_VALUE             6
 #define STM32_PLLSAI1P_VALUE                7
-#define STM32_PLLSAI1Q_VALUE                2
-#define STM32_PLLSAI1R_VALUE                2
+#define STM32_PLLSAI1Q_VALUE                6
+#define STM32_PLLSAI1R_VALUE                6
+#define STM32_USB_CLOCK_REQUIRED            TRUE
+#define STM32_USBPRE                        STM32_USBPRE_DIV1P5
 
 /*
  * Peripherals clock sources.
@@ -184,7 +186,7 @@
  * PWM driver system settings.
  */
 #define STM32_PWM_USE_ADVANCED              FALSE
-#define STM32_PWM_USE_TIM1                  FALSE
+#define STM32_PWM_USE_TIM1                  TRUE
 #define STM32_PWM_USE_TIM2                  FALSE
 #define STM32_PWM_USE_TIM15                 FALSE
 #define STM32_PWM_USE_TIM16                 FALSE
@@ -201,7 +203,7 @@
  * SERIAL driver system settings.
  */
 #define STM32_SERIAL_USE_USART1             FALSE
-#define STM32_SERIAL_USE_USART2             FALSE
+#define STM32_SERIAL_USE_USART2             TRUE
 #define STM32_SERIAL_USE_LPUART1            FALSE
 #define STM32_SERIAL_USART1_PRIORITY        12
 #define STM32_SERIAL_USART2_PRIORITY        12
@@ -264,3 +266,4 @@
 #define STM32_WSPI_QUADSPI1_DMA_STREAM      STM32_DMA_STREAM_ID(2, 7)
 
 #endif /* MCUCONF_H */
+

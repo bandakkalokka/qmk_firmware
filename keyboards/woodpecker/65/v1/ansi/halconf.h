@@ -69,13 +69,6 @@
 #endif
 
 /**
- * @brief   Enables the EFlash subsystem.
- */
-#if !defined(HAL_USE_EFL) || defined(__DOXYGEN__)
-#define HAL_USE_EFL                         FALSE
-#endif
-
-/**
  * @brief   Enables the GPT subsystem.
  */
 #if !defined(HAL_USE_GPT) || defined(__DOXYGEN__)
@@ -121,7 +114,7 @@
  * @brief   Enables the PWM subsystem.
  */
 #if !defined(HAL_USE_PWM) || defined(__DOXYGEN__)
-#define HAL_USE_PWM                         FALSE
+#define HAL_USE_PWM                         TRUE
 #endif
 
 /**
@@ -142,7 +135,7 @@
  * @brief   Enables the SERIAL subsystem.
  */
 #if !defined(HAL_USE_SERIAL) || defined(__DOXYGEN__)
-#define HAL_USE_SERIAL                      FALSE
+#define HAL_USE_SERIAL                      TRUE
 #endif
 
 /**
@@ -458,6 +451,7 @@
 #define SPI_USE_CIRCULAR                    FALSE
 #endif
 
+
 /**
  * @brief   Enables the @p spiAcquireBus() and @p spiReleaseBus() APIs.
  * @note    Disabling this option saves both code and data space.
@@ -529,3 +523,4 @@
 #endif /* HALCONF_H */
 
 /** @} */
+
